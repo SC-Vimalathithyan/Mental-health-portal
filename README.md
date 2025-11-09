@@ -1,6 +1,6 @@
-Mental Health Support and Counselling Portal
+# Mental Health Support and Counselling Portal
 
-Overview
+## Overview
 This project is a web-based Mental Health Support and Counselling Portal built with Flask (Python). It provides a safe, anonymous platform for users to access mental health resources, track moods, engage in simulated counselling chats, and reach emergency support. The portal emphasizes privacy, accessibility, and user-friendly design to help bridge gaps in traditional mental health services.
 
 ### Problem Statement
