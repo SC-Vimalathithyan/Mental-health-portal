@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Dashboard</h2>
+<div class="row">
+    <div class="col-md-4"><a href="{{ url_for('resources') }}" class="btn btn-info w-100">Resources</a></div>
+    <div class="col-md-4"><a href="{{ url_for('mood_tracker') }}" class="btn btn-success w-100">Mood Tracker</a></div>
+    <div class="col-md-4"><a href="{{ url_for('chat') }}" class="btn btn-warning w-100">Chat Counselling</a></div>
+</div>
+{% endblock %}

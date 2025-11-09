@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="text-center">
+    <h1>Welcome to MindCare Portal</h1>
+    <p>Your safe space for mental health support and counselling.</p>
+    <a href="{{ url_for('register') }}" class="btn btn-primary">Get Started</a>
+    <a href="{{ url_for('emergency') }}" class="btn btn-danger">Emergency Help</a>
+</div>
+<div id="emergency" class="mt-4">
+    <h3>Emergency Resources</h3>
+    <p>If you're in crisis, call 14416 or your local hotline.</p>
+</div>
+{% endblock %}

@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Resource Library</h2>
+<ul class="list-group">
+    {% for resource in resources %}
+        <li class="list-group-item">{{ resource.title }} ({{ resource.type }}) <a href="{{ resource.link }}">View</a></li>
+    {% endfor %}
+</ul>
+{% endblock %}

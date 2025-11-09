@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="row">
+    <div class="col-md-8">
+        <h2>Emergency Support</h2>
+        <p class="text-danger fw-bold">If you or someone you know is in immediate danger, call emergency services (e.g., 14416 all over India) right away. This page is for informational purposes and not a substitute for professional crisis intervention.</p>
+        
+        <h3>Crisis Hotlines</h3>
+        <ul class="list-group mb-4">
+            <li class="list-group-item"><strong>Tamil Nadu:</strong>Call 14416 - 24/7 support.</li>
+            <li class="list-group-item"><strong>Kerala:</strong>Call 14416 (24/7).</li>
+            <li class="list-group-item"><strong>Karanataka:</strong>Call 14416.</li>
+            <li class="list-group-item"><strong>Andhra Pradesh:</strong>Call 14416</li>
+            <li class="list-group-item"><strong>International:</strong> Visit <a href="https://www.befrienders.org" target="_blank">Befrienders Worldwide</a> for local hotlines.</li>
+        </ul>
+        
+        <h3>Quick Tips for Immediate Help</h3>
+        <ul class="list-unstyled">
+            <li>✓ Breathe deeply: Inhale for 4 seconds, hold for 4, exhale for 4.</li>
+            <li>✓ Reach out: Talk to a trusted friend or family member.</li>
+            <li>✓ Ground yourself: Name 5 things you can see, 4 you can touch, etc.</li>
+            <li>✓ Seek professional help: Contact a counsellor through our <a href="{{ url_for('chat') }}">chat</a> or local services.</li>
+        </ul>
+    </div>
+    <div class="col-md-4">
+        <div class="card bg-light">
+            <div class="card-body">
+                <h5 class="card-title">Need More Help?</h5>
+                <p class="card-text">If you're logged in, access our virtual counselling or resources.</p>
+                {% if current_user.is_authenticated %}
+                    <a href="{{ url_for('chat') }}" class="btn btn-primary">Start Chat</a>
+                {% else %}
+                    <a href="{{ url_for('login') }}" class="btn btn-primary">Login to Chat</a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
